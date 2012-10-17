@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="krad-contest:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="krworkshop-0.0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="krad-contest:war exploded" />
+    </root>
+  </artifact>
+</component>
