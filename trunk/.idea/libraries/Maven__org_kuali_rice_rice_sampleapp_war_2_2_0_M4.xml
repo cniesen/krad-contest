@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.kuali.rice:rice-sampleapp:war:2.2.0-M4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kuali/rice/rice-sampleapp/2.2.0-M4/rice-sampleapp-2.2.0-M4.war!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kuali/rice/rice-sampleapp/2.2.0-M4/rice-sampleapp-2.2.0-M4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kuali/rice/rice-sampleapp/2.2.0-M4/rice-sampleapp-2.2.0-M4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
