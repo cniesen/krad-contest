@@ -26,7 +26,7 @@ This file contains custom application specific portal content.
 <div class="body">
 
   <ul class="chan">
-      <li><a class="portal_link" target="_blank" href="${ConfigProperties.application.url}/kr-krad/collegeapp?viewId=Contest-TestView&methodToCall=start" />Contest Test View</a></li>
+      <li><a class="portal_link" target="_blank" href="${ConfigProperties.application.url}/kr-krad/contest?viewId=Contest-TestView&methodToCall=start" />Contest Test View</a></li>
       <!-- put more view links here if needed-->
   </ul>
 
