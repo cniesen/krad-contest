@@ -69,6 +69,8 @@
     <property name="dataDictionaryPackages">
       <list>
           <value>classpath:org/kuali/rice/contest/Contest-TestView.xml</value>
+          <value>classpath:org/kuali/rice/contest/Password.xml</value>
+          <!-- ****** ADD more Uif configuration xml files here ******-->
       </list>
     </property>
     <property name="packagePrefixes">
