@@ -18,45 +18,51 @@
 -->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-                           http://www.springframework.org/schema/util
-                           http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-  <!--
-  ********************************************************************************************************************
-                                  Contest Test View
-  ********************************************************************************************************************
-  -->
-  <bean id="Contest-TestView" parent="Uif-FormView">
-    <property name="headerText" value="TODO: add view title"/>
-    <property name="formClass" value="org.kuali.rice.contest.ContestTestForm"/>
-    <property name="items">
-      <list>
-        <ref bean="Contest-TestPage1"/>
-      </list>
-    </property>
-    <property name="theme">
-      <bean parent="Uif-KradTheme"/>
-    </property>
-  </bean>
-  
-  <!-- Alternate version of this view, only changing the theme -->
-  <bean id="Contest-TestView-KNS" parent="Contest-TestView">
-    <property name="theme">
-      <bean parent="Uif-ClassicKnsTheme"/>
-    </property>
-  </bean>
+    <!--
+    ********************************************************************************************************************
+                                    Contest Test View
+    ********************************************************************************************************************
+    -->
+    <bean id="Contest-TestView" parent="Uif-FormView">
+        <property name="headerText" value="TODO: add view title"/>
+        <property name="formClass" value="org.kuali.rice.contest.ContestTestForm"/>
+        <property name="items">
+            <list>
+                <ref bean="Contest-TestPage1"/>
+            </list>
+        </property>
+        <property name="theme">
+            <bean parent="Uif-KradTheme"/>
+        </property>
+    </bean>
 
-  <!-- College Application page -->
-  <bean id="Contest-TestPage1" parent="Uif-Page">
-    <property name="headerText" value="TODO: add page title"/>
-    <property name="items">
-      <list>
-          <!-- put group/field/element components here -->
-      </list>
-    </property>
-  </bean>
+    <!-- Alternate version of this view, only changing the theme -->
+    <bean id="Contest-TestView-KNS" parent="Contest-TestView">
+        <property name="theme">
+            <bean parent="Uif-ClassicKnsTheme"/>
+        </property>
+    </bean>
+
+    <!-- College Application page -->
+    <bean id="Contest-TestPage1" parent="Uif-Page">
+        <property name="headerText" value="TODO: add page title"/>
+        <property name="items">
+            <list>
+                <bean parent="Uif-InputField-LabelTop" p:propertyName="field1" p:label="Password Demo"
+                      p:instructionalText="Enter a password">
+                    <property name="control">
+                        <bean parent="Uif-PasswordControl" p:watermarkText="Enter your password"/>
+                    </property>
+                    <property name="validCharactersConstraint">
+                        <bean parent="AlphaPatternConstraint"/>
+                    </property>
+                </bean>
+                <!-- put group/field/element components here -->
+            </list>
+        </property>
+    </bean>
 
 </beans>
