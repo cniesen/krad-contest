@@ -26,7 +26,6 @@ in configuration files outside of the project.
 
 -->
 <config>
-
   <param name="rice.logging.configure">true</param>
 
   <param name="location.mode">LOCAL</param>
@@ -46,10 +45,7 @@ in configuration files outside of the project.
 
   <param name="dev.mode">true</param>
 
-      
   <param name="datasource.ojb.platform">MySQL</param>
-
-    
   <param name="datasource.url">jdbc:mysql://localhost:3306/ricedev</param>
   <param name="datasource.username">RICE</param>
   <param name="datasource.password">RICE</param>
@@ -57,6 +53,6 @@ in configuration files outside of the project.
   <param name="config.location">classpath:META-INF/common-config-defaults.xml</param>
   <param name="config.location">classpath:META-INF/common-config-locations.xml</param>
   <param name="config.location">${alt.config.location}</param>
-    <param name="transaction.timeout">3600</param>
+  <param name="transaction.timeout">3600</param>
   <param name="version">contest :: ${project.version} :: ${kuali.build.timestamp}</param>
 </config>
