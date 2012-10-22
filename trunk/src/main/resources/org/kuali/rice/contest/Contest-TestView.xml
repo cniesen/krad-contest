@@ -1,68 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    Copyright 2005-2012 The Kuali Foundation
-
-    Licensed under the Educational Community License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-    http://www.opensource.org/licenses/ecl2.php
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
--->
+<!-- Copyright 2005-2012 The Kuali Foundation Licensed under the Educational 
+	Community License, Version 2.0 (the "License"); you may not use this file 
+	except in compliance with the License. You may obtain a copy of the License 
+	at http://www.opensource.org/licenses/ecl2.php Unless required by applicable 
+	law or agreed to in writing, software distributed under the License is distributed 
+	on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either 
+	express or implied. See the License for the specific language governing permissions 
+	and limitations under the License. -->
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <!--
-    ********************************************************************************************************************
-                                    Contest Test View
-    ********************************************************************************************************************
-    -->
-    <bean id="Contest-TestView" parent="Uif-FormView">
-        <property name="headerText" value="TODO: add view title"/>
-        <property name="formClass" value="org.kuali.rice.contest.ContestTestForm"/>
-        <property name="items">
-            <list>
-                <ref bean="Contest-TestPage1"/>
-            </list>
-        </property>
-        <property name="theme">
-            <bean parent="Uif-KradTheme"/>
-        </property>
-    </bean>
+	<!-- ******************************************************************************************************************** 
+		Contest Test View ******************************************************************************************************************** -->
+	<bean id="Contest-TestView" parent="Uif-FormView">
+		<property name="headerText" value="KRAD Contest View: build something Cool!" />
+		<property name="formClass" value="org.kuali.rice.contest.ContestTestForm" />
+		<property name="items">
+			<list>
+				<ref bean="Contest-TestPage1" />
+			</list>
+		</property>
+		<property name="theme">
+			<bean parent="Uif-KradTheme" />
+		</property>
+	</bean>
 
-    <!-- Alternate version of this view, only changing the theme -->
-    <bean id="Contest-TestView-KNS" parent="Contest-TestView">
-        <property name="theme">
-            <bean parent="Uif-ClassicKnsTheme"/>
-        </property>
-    </bean>
+	<!-- Alternate version of this view, only changing the theme -->
+	<bean id="Contest-TestView-KNS" parent="Contest-TestView">
+		<property name="theme">
+			<bean parent="Uif-ClassicKnsTheme" />
+		</property>
+	</bean>
 
-    <!-- College Application page -->
-    <bean id="Contest-TestPage1" parent="Uif-Page">
-        <property name="headerText" value="TODO: add page title"/>
-        <property name="items">
-            <list>
-                <bean parent="Uif-InputField-LabelTop" p:propertyName="field1" p:label="Password Demo"
-                      p:instructionalText="Enter a password">
-                    <property name="control">
-                        <bean parent="Uif-PasswordControl" p:watermarkText="Enter your password"/>
-                    </property>
-                    <property name="validCharactersConstraint">
-                        <bean parent="AlphaPatternConstraint"/>
-                    </property>
-                </bean>
-                <!-- put group/field/element components here -->
-            </list>
-        </property>
-    </bean>
+	<!-- College Application page -->
+	<bean id="Contest-TestPage1" parent="Uif-Page">
+		<property name="headerText" value="Components" />
+		<property name="items">
+			<list>
+				<bean parent="Uif-InputField-LabelTop" p:propertyName="field1"
+					p:label="Password Demo" p:instructionalText="Enter a password">
+					<property name="control">
+						<bean parent="Uif-PasswordControl" p:watermarkText="Enter your password" />
+					</property>
+					<property name="validCharactersConstraint">
+						<bean parent="AlphaPatternConstraint" />
+					</property>
+				</bean>
+				<!-- put group/field/element components here -->
+			</list>
+		</property>
+	</bean>
 
 </beans>

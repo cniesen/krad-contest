@@ -17,10 +17,6 @@ package org.kuali.rice.contest;
 
 import org.kuali.rice.krad.web.form.UifFormBase;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 /**
  * Contest test form for demonstration purposes
  */
