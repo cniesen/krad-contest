@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="Uif-TextWithColorPickerControl" parent="Uif-TextWithColorPickerControl-parentBean"/>
+    <bean id="Uif-TextWithColorPickerControl-parentBean" abstract="true"
+          class="org.kuali.rice.contest.components.control.TextWithColorPicker"
+          scope="prototype" parent="Uif-TextControl">
+        <property name="template" value="/WEB-INF/ftl/components/control/textWithColorPicker.ftl"/>
+        <property name="templateName" value="uif_textWithColorPicker"/>
+        <property name="size" value="7"/>
+        <property name="colorPicker">
+            <bean parent="Uif-ColorPicker"/>
+        </property>
+    </bean>
+
+    <bean id="Uif-ColorPicker" parent="Uif-ColorPicker-parentBean"/>
+    <bean id="Uif-ColorPicker-parentBean" abstract="true" class="org.kuali.rice.contest.components.widget.ColorPicker"
+          scope="prototype" parent="Uif-WidgetBase">
+        <property name="template" value="/WEB-INF/ftl/components/widget/colorPicker.ftl"/>
+        <property name="templateName" value="uif_colorPicker"/>
+        <property name="defaultColor" value="#FFFFFF"/>
+        <property name="showColorPreviewIcon" value="true"/>
+    </bean>
+</beans>

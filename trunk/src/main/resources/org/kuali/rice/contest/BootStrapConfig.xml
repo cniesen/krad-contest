@@ -55,4 +55,6 @@ in configuration files outside of the project.
   <param name="config.location">${alt.config.location}</param>
   <param name="transaction.timeout">3600</param>
   <param name="version">contest :: ${project.version} :: ${kuali.build.timestamp}</param>
+
+   <param name="resourceBundleNames">org.kuali.rice.krad.KRADApplicationResources,org.kuali.rice.krad.ApplicationResources,ContestResources</param>
 </config>

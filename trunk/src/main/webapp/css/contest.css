@@ -1,0 +1,18 @@
+div.colorPickerIcon {
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+.colorPickerIcon > span {
+    height: 14px;
+    left: 1;
+    position: absolute;
+    top: 1;
+    width: 14px;
+    border: 1px solid white;
+}
