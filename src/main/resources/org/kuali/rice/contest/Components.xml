@@ -9,9 +9,9 @@
 	<!-- example control -->
 	<bean id="Uif-PasswordControl" parent="Uif-PasswordControl-parentBean" />
 	<bean id="Uif-PasswordControl-parentBean" abstract="true"
-		class="org.kuali.rice.contest.components.control.Password" scope="prototype"
+		class="org.kuali.rice.contest.components.Password" scope="prototype"
 		parent="Uif-ControlBase">
-		<property name="template" value="/WEB-INF/ftl/components/control/password.ftl" />
+		<property name="template" value="/WEB-INF/ftl/components/password.ftl" />
 		<property name="templateName" value="uif_password" />
 		<property name="cssClasses">
 			<list merge="true">
@@ -24,10 +24,10 @@
     <!-- example widget -->
 	<bean id="Uif-ColorPicker" parent="Uif-ColorPicker-parentBean" />
 	<bean id="Uif-ColorPicker-parentBean" abstract="true"
-		class="org.kuali.rice.contest.components.widget.ColorPicker" scope="prototype"
+		class="org.kuali.rice.contest.components.ColorPicker" scope="prototype"
 		parent="Uif-WidgetBase">
 		<property name="template"
-			value="/WEB-INF/ftl/components/widget/colorPicker.ftl" />
+			value="/WEB-INF/ftl/components/colorPicker.ftl" />
 		<property name="templateName" value="uif_colorPicker" />
 		<property name="defaultColor" value="#FFFFFF" />
 		<property name="showColorPreviewIcon" value="true" />
@@ -36,17 +36,15 @@
     <!-- example control with widget -->
 	<bean id="Uif-TextWithColorPickerControl" parent="Uif-TextWithColorPickerControl-parentBean" />
 	<bean id="Uif-TextWithColorPickerControl-parentBean" abstract="true"
-		class="org.kuali.rice.contest.components.control.TextWithColorPicker"
+		class="org.kuali.rice.contest.components.TextWithColorPicker"
 		scope="prototype" parent="Uif-TextControl">
 		<property name="template"
-			value="/WEB-INF/ftl/components/control/textWithColorPicker.ftl" />
+			value="/WEB-INF/ftl/components/textWithColorPicker.ftl" />
 		<property name="templateName" value="uif_textWithColorPicker" />
 		<property name="size" value="7" />
 		<property name="colorPicker">
 			<bean parent="Uif-ColorPicker" />
 		</property>
 	</bean>
-
-
 
 </beans>                    

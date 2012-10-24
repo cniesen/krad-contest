@@ -1,12 +1,7 @@
-<#--
-    This is a copy of the text.ftl file in rice with the color picker part added
+<#macro uif_password control field>
 
- -->
-
-<#macro uif_textWithColorPicker control field>
-
-    <#local attributes='size="${control.size!}" class="${control.styleClassesAsString!}"
-         tabindex="${control.tabIndex!}"  ${control.simpleDataAttributes!}'/>
+    <#local attributes='size="${control.size!}" class="${control.styleClassesAsString!}" 
+                        tabindex="${control.tabIndex!}" ${control.simpleDataAttributes!}'/>
 
     <#if control.disabled>
         <#local attributes='${attributes} disabled="disabled"'/>
@@ -28,18 +23,16 @@
         <#local attributes='${attributes} minLength="${control.minLength}"'/>
     </#if>
 
-    <@spring.formInput id="${control.id}" path="KualiForm.${field.bindingInfo.bindingPath}" attributes="${attributes}"/>
+    <!-- The actual control generation, calls spring formPasswordInput (as this is a standard html control -->
+    <@spring.formPasswordInput id="${control.id}" path="KualiForm.${field.bindingInfo.bindingPath}"
+        attributes="${attributes}"/>
 
+    <!-- Setup the control's watermark support (for text entry controls -->
     <#if control.watermarkText?has_content>
         <@krad.script value="createWatermark('${control.id}', '${control.watermarkText?js_string}');"/>
     </#if>
 
-    <#-- render date picker widget -->
-    <@krad.template component=control.datePicker componentId="${control.id}"/>
-
-    <#-- render color picker widget -->
-    <@krad.template component=control.colorPicker componentId="${control.id}"/>
-
-    <@krad.disable control=field.control type="text"/>
+    <!-- Setup the control's dynamic disable support -->
+    <@krad.disable control=field.control type="password"/>
 
 </#macro>

@@ -1,4 +1,4 @@
-package org.kuali.rice.contest.components.widget;
+package org.kuali.rice.contest.components;
 
 import org.kuali.rice.krad.uif.widget.WidgetBase;
 
@@ -6,7 +6,9 @@ import org.kuali.rice.krad.uif.widget.WidgetBase;
  * Color picker widget options which allows for selection of web color hex values
  */
 public class ColorPicker extends WidgetBase{
-    private String defaultColor;
+	private static final long serialVersionUID = 1L;
+	
+	private String defaultColor;
     private boolean showColorPreviewIcon;
     private boolean showColorPickerOnFocus;
     private boolean changeControlBackground;
