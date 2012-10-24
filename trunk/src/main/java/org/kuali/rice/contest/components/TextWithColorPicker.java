@@ -1,6 +1,5 @@
-package org.kuali.rice.contest.components.control;
+package org.kuali.rice.contest.components;
 
-import org.kuali.rice.contest.components.widget.ColorPicker;
 import org.kuali.rice.krad.uif.control.TextControl;
 
 /**
@@ -8,7 +7,9 @@ import org.kuali.rice.krad.uif.control.TextControl;
  * control input
  */
 public class TextWithColorPicker extends TextControl {
-    private ColorPicker colorPicker;
+	private static final long serialVersionUID = 1L;
+	
+	private ColorPicker colorPicker;
 
     /**
      * Get the ColorPicker widget used to configure a colorpicker for this control

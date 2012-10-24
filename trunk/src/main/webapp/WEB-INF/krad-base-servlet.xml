@@ -64,7 +64,7 @@
     <property name="templateLoaderPath" value="/"/>
     <property name="freemarkerSettings">
       <props>
-        <prop key="template_update_delay">1000000</prop>
+        <prop key="template_update_delay">1</prop>
         <prop key="cache_storage">freemarker.cache.StrongCacheStorage</prop>
         <prop key="number_format">computer</prop>
       </props>

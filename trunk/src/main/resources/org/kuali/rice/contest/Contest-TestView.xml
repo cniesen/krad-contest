@@ -68,7 +68,7 @@
                 <bean parent="Uif-InputField-LabelTop" p:propertyName="field1" p:label="Password Demo"
                       p:instructionalText="Enter a password" p:constraintText="Can only be alphanumeric">
                     <property name="control">
-                        <bean parent="Uif-PasswordControl" p:watermarkText="Enter your password"/>
+                        <bean parent="Uif-PasswordControl" p:maxLength="25" p:minLength="5" p:watermarkText="Enter your password"/>
                     </property>
                     <property name="validCharactersConstraint">
                         <bean parent="AlphaNumericPatternConstraint"/>
@@ -76,7 +76,7 @@
                 </bean>
                 
                 <bean parent="Uif-InputField-LabelTop" p:propertyName="field2" p:label="Color Picker Demo"
-                      p:instructionalText="Enter a color by hex value">
+                      p:instructionalText="Enter a color by hex value (note: drag mouse to select a color in picker)">
                     <property name="control">
                         <bean parent="Uif-TextWithColorPickerControl" p:watermarkText="ffffff"/>
                     </property>

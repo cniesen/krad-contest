@@ -1,4 +1,4 @@
-package org.kuali.rice.contest.components.control;
+package org.kuali.rice.contest.components;
 
 import org.apache.commons.lang.StringUtils;
 import org.kuali.rice.krad.uif.component.Component;
