@@ -63,15 +63,13 @@
    		</property>
    	</bean>
 
-  <bean id="applyModuleConfiguration" class="org.kuali.rice.krad.bo.ModuleConfiguration">
-    <property name="namespaceCode" value="apply"/>
+  <bean id="contestModuleConfiguration" class="org.kuali.rice.krad.bo.ModuleConfiguration">
+    <property name="namespaceCode" value="contest"/>
     <property name="initializeDataDictionary" value="true"/>
     <property name="dataDictionaryPackages">
       <list>
           <value>classpath:org/kuali/rice/contest/Contest-TestView.xml</value>
-          <value>classpath:org/kuali/rice/contest/Password.xml</value>
-          <value>classpath:org/kuali/rice/contest/TextWithColorPicker.xml</value>
-          <!-- ****** ADD more Uif configuration xml files here ******-->
+          <value>classpath:org/kuali/rice/contest/Components.xml</value>
       </list>
     </property>
     <property name="packagePrefixes">
@@ -81,11 +79,9 @@
     </property>
   </bean>
 
-  <bean id="applyModuleService" class="org.kuali.rice.krad.service.impl.ModuleServiceBase">
-    <property name="moduleConfiguration" ref="applyModuleConfiguration"/>
+  <bean id="contestModuleService" class="org.kuali.rice.krad.service.impl.ModuleServiceBase">
+    <property name="moduleConfiguration" ref="contestModuleConfiguration"/>
   </bean>
-
-
 
 </beans>
 
