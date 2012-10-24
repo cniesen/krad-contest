@@ -27,7 +27,7 @@
     ********************************************************************************************************************
     -->
     <bean id="Contest-TestView" parent="Uif-FormView">
-        <property name="headerText" value="TODO: add view title"/>
+        <property name="headerText" value="KRAD Contest View: build something cool!"/>
         <property name="formClass" value="org.kuali.rice.contest.ContestTestForm"/>
         <property name="items">
             <list>
@@ -62,7 +62,7 @@
 
     <!-- College Application page -->
     <bean id="Contest-TestPage1" parent="Uif-Page">
-        <property name="headerText" value="TODO: add page title"/>
+        <property name="headerText" value="Components"/>
         <property name="items">
             <list>
                 <bean parent="Uif-InputField-LabelTop" p:propertyName="field1" p:label="Password Demo"
@@ -74,6 +74,7 @@
                         <bean parent="AlphaNumericPatternConstraint"/>
                     </property>
                 </bean>
+                
                 <bean parent="Uif-InputField-LabelTop" p:propertyName="field2" p:label="Color Picker Demo"
                       p:instructionalText="Enter a color by hex value">
                     <property name="control">
@@ -84,6 +85,7 @@
                             p:messageKey="validation.hexValue" />
                     </property>
                 </bean>
+                
                 <bean parent="Uif-InputField-LabelTop" p:propertyName="field2" p:label="Color Picker Demo"
                       p:instructionalText="Enter a color by hex value, no icon, show on focus and change control bg
                       options on">
@@ -97,6 +99,7 @@
                             p:messageKey="validation.hexValue" />
                     </property>
                 </bean>
+                
                 <!-- put group/field/element components here -->
             </list>
         </property>
